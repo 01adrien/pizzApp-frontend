@@ -2,7 +2,7 @@ name: s3-depl-dev
 on:
     push:
         branches:
-            - dev
+            - main
 jobs:
     build:
         runs-on: ubuntu-latest
