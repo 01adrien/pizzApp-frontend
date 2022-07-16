@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PizzaList from "./components/pizzaList";
 import Layout from "./components/layout";
 import Order from "./components/order";
