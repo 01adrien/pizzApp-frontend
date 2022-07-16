@@ -13,9 +13,6 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: "16"
-            - name: Creating build directory
-              run: |
-                  mkdir build && cd build
             - name: Building project
               run: npm install && npm run build
               env:
@@ -27,4 +24,4 @@ jobs:
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                   aws-region: us-west-1
             - name: Deploy to S3 bucket
-              run: aws s3 sync . s3://pizz-app --delete
+              run: aws s3 sync build s3://pizz-app --delete
