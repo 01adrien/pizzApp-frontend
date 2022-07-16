@@ -1,4 +1,4 @@
-name: s3-depl-dev
+name: Deploy-to-S3
 on:
     push:
         branches:
@@ -27,4 +27,4 @@ jobs:
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                   aws-region: us-west-1
             - name: Deploy to S3 bucket
-              run: aws s3 sync . s3://dev-pizzApp-deploy --delete
+              run: aws s3 sync . s3://pizz-app --delete
